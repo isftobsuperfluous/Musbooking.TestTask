@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Musbooking.TestTask.Enums;
-using Musbooking.TestTask.Infrastructure.Entities;
 using Musbooking.TestTask.ServiceAbstractions;
 
 namespace Musbooking.TestTask.Controllers;

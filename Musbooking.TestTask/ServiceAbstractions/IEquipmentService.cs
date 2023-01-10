@@ -1,5 +1,4 @@
-﻿using Musbooking.TestTask.Enums;
-using Musbooking.TestTask.Infrastructure.Entities;
+﻿using Musbooking.TestTask.Infrastructure.Entities;
 using Musbooking.TestTask.ServiceResponses;
 using Musbooking.TestTask.ServiceResponses.EquipmentServiceResponses;
 

@@ -1,9 +1,6 @@
-using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using Musbooking.TestTask.Extensions;
 using Musbooking.TestTask.Infrastructure;
-using Musbooking.TestTask.Infrastructure.Entities;
-using Musbooking.TestTask.OnShutdownHelpers;
 using Musbooking.TestTask.ServiceAbstractions;
 using Musbooking.TestTask.Services;
 
@@ -32,16 +29,6 @@ app.Lifetime.ApplicationStopping.Register(OnShutDown);
 app.MapControllers();
 
 await app.Services.MigrateDatabaseAsync();
-
-// foreach (var bookedEquipment in inMemoryDbContext.Equipment)
-// {
-//     var equipment = await dbContext.Equipment.FirstOrDefaultAsync(x => x.Id == bookedEquipment.Id);
-//     if (equipment is not null)
-//     {
-//         equipment.Amount += bookedEquipment.Amount;
-//         dbContext.Equipment.Update(equipment);
-//     }
-// }
 
 async void OnShutDown()
 {
